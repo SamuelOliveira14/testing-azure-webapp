@@ -2,7 +2,7 @@
   "name": "azure-function-app",
   "version": "1.0.0",
   "main": "server.js",
-  "type":"module",
+  "type": "module",
   "scripts": {
     "start": "node src/server.js"
   },
@@ -11,6 +11,7 @@
   "description": "",
   "dependencies": {
     "azure-aws-serverless-express": "^0.1.5",
+    "dotenv": "^16.4.5",
     "express": "^4.21.1"
   }
 }
