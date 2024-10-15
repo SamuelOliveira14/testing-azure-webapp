@@ -18,6 +18,6 @@ app.get('/', mid, (req, res) => {
 app.get('/about', (req, res) => {
     res.status(200).json({
         message: 'This is the about page',
-        content: process.env.CONTENT || 'NO CONTENT'
+        content: process.env.CONTENT || 'NO CONTENT --'
     })
 })
