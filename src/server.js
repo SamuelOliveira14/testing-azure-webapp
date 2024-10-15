@@ -11,3 +11,9 @@ app.listen(PORT, () => {
 app.get('/', mid, (req, res) => {
     res.status(200).ssend('Hello, world!')
 })
+
+app.get('/about', (req, res) => {
+    res.status(200).json({
+        message: 'This is the about page'
+    })
+})
