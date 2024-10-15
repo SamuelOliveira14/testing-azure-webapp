@@ -9,7 +9,7 @@ app.listen(PORT, () => {
 })
 
 app.get('/', mid, (req, res) => {
-    res.status(200).ssend('Hello, world!')
+    res.status(200).send('Hello, world!')
 })
 
 app.get('/about', (req, res) => {
