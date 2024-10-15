@@ -1,0 +1,16 @@
+{
+  "name": "azure-function-app",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type":"module",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "azure-aws-serverless-express": "^0.1.5",
+    "express": "^4.21.1"
+  }
+}
