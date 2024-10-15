@@ -2,7 +2,7 @@ import express from 'express'
 import mid from './mid.js'
 
 const app = express()
-const PORT = 5000
+const PORT = 8080
 
 app.listen(PORT, () => {
     console.log(`Server running on: ${PORT}`)
