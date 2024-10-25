@@ -1,6 +1,7 @@
 import express from 'express'
 import mid from './mid.js'
 import dotenv from 'dotenv'
+import axios from 'axios'
 
 dotenv.config()
 
@@ -15,9 +16,17 @@ app.get('/', mid, (req, res) => {
     res.status(200).send('Hello, world!')
 })
 
-app.get('/about', (req, res) => {
+app.get('/about', async (req, res) => {
+    
+    let response = null
+    try{
+        response = await axios.get('https://graph.microsoft.com/v1.0/me')
+    }catch(error){
+        response = {data: 'Unauthorized'}
+    }
+    
     res.status(200).json({
         message: 'This is the about page',
-        content: process.env.CONTENT || 'NO CONTENT --'
+        content: response.data || 'NO CONTENT --'
     })
 })
