@@ -2,11 +2,14 @@ import express from 'express'
 import mid from './mid.js'
 import dotenv from 'dotenv'
 import axios from 'axios'
+import cors from 'cors'
 
 dotenv.config()
 
 const app = express()
 const PORT = process.env.PORT || 8080
+
+app.use(cors())
 
 app.listen(PORT, () => {
     console.log(`Server running on: ${PORT}`)
